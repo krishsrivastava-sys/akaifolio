@@ -11,7 +11,6 @@
 
   --accent: #5eb3ff;
   --accent-hover: #86c9ff;
-
   --border-color: #2a2d34;
   --shadow-color: rgba(0, 0, 0, 0.4);
 }
@@ -29,5 +28,9 @@ body {
   font-family: "Elms Sans", sans-serif;
   background-color: var(--bg-primary);
   color: var(--text-primary);
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 60px 60px; /* grid spacing */
   margin: 0;
 }

@@ -1,23 +1,28 @@
-import '../style/frontsec.css'
+import { useState, useEffect } from "react";
+import "../style/frontsec.css";
+import "../style/fsleft.css";
+import logoImg from "../assets/logo.png";
 
 function FrontSec() {
   return (
     <section className="frontsec">
-        <div className="fs-left">
-          <h1>Lorem ipsum dolor sit amet</h1>
+      <div className="fs-left">
+        <div className="fs-left-content">
+          <h1>Greetings! I'm Krish Srivastava</h1>
           <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
         </div>
-        <div className="fs-right">
-        <h2><i class="fa-solid fa-house"></i> File System</h2>
+        <img src={logoImg} className="logo" alt="Website logo" />
+      </div>
+      <div className="fs-right">
+        <h2>File System</h2>
+        <input type="text" placeholder="Search this webpage..." />
         <ul>
-            <li>index.html</li>
-            <li>styles.css</li>
-            <li>app.js</li>
-            <li>README.md</li>
+          <li><a href="#home">main.html</a></li>
+          <li><a href="#about">aboutme.md</a></li>
+          <li><a href="#projects">projects.json</a></li>
         </ul>
-    </div>
+      </div>
     </section>
   );
 }
-
 export default FrontSec;

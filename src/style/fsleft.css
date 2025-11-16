@@ -1,0 +1,20 @@
+.fs-left-content {
+    height: 60vh;
+    display: flex;
+    flex-direction: column; /* <-- stack vertically */
+    align-items: flex-start; /* keep left-aligned */
+    justify-content: center; /* center vertically inside section */
+    padding-left: 10vh;
+}
+
+.logo {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 100px;
+    height: auto;
+    opacity: 0.1;
+}
+.logo:hover {
+    opacity: 0.3;
+}
