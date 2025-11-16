@@ -1,23 +1,29 @@
 .frontsec {
     display: flex;
-    align-items: stretch; /* important */
+    align-items: stretch;
     min-height: 90vh;
     background-color: var(--section-bg);
     border-bottom: 3px solid var(--border-color);
 }
-
+/* 75% area */
 .frontsec .fs-left {
-    width: 65%;
+    flex: 3;
+    /* takes 3 parts out of 4 */
 }
 
+/* 25% area */
 .frontsec .fs-right {
+    flex: 1;
+    /* takes 1 part out of 4 */
     border-left: 3px solid var(--border-color);
-    width: 35%;
-    background: radial-gradient(circle at bottom right, #16181d 20%, transparent 80%), radial-gradient(circle at top right, #16181d 20%, transparent 80%);
+    background:
+        radial-gradient(circle at bottom right, #16181d 20%, transparent 80%),
+        radial-gradient(circle at top right, #16181d 20%, transparent 80%);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .frontsec .fs-right input[type="text"] {
     margin: 20px;
     padding: 10px;
@@ -27,20 +33,60 @@
     background-color: var(--bg-elevated);
     color: var(--text-primary);
 }
+
 .frontsec .fs-right h2 {
     font-size: 30px;
     padding: 20px;
 }
+
 .frontsec .fs-right ul {
     list-style: none;
     padding: 20px;
 }
+
 .frontsec .fs-right ul li a {
     text-decoration: none;
     color: var(--text-primary);
-
 }
+
 .frontsec .fs-right ul li a:hover {
     color: var(--accent);
     text-decoration: underline;
+}
+
+.changelog {
+    position: fixed;
+    top: 50%;
+    left: 1%;
+    padding: 15px;
+    max-width: 40vh;
+    min-height: 40vh;
+    background-color: var(--bg-elevated);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    color: var(--text-primary);
+}
+
+/* Logo click animation */
+.logo {
+    transition: transform .3s ease;
+}
+
+.logo-animate {
+    animation: logoPop .6s ease forwards;
+}
+
+@keyframes logoPop {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+    30% {
+        transform: scale(1.2) rotate(10deg);
+    }
+    60% {
+        transform: scale(0.9) rotate(-10deg);
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
 }
